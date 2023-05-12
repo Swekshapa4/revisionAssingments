@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    age:<input type="number" name="" id="age">
+    <button id="btn">submit</button>
+    <h1><div id="span"></div></h1>
+</body>
+</html>
+<script>
+    var bton=document.querySelector("#btn");
+    bton.addEventListener("click",agecheck);
+    function agecheck(){
+        var agechk=document.getElementById("age").value;
+        console.log(agechk); 
+        var spn=document.getElementById("span")
+        if(agechk>18){
+         spn.textContent="You can drive in India";
+         spn.style.color="green"
+        }
+        else if(agechk<18){
+            spn.textContent="you cannot drive in India";
+            spn.style.color="teal"
+        }
+        else{
+            spn.textContent="You are just old enough to drive in India";
+            spn.style.color="red"
+        }
+    }
+</script>
